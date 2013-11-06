@@ -5,11 +5,11 @@ import (
 )
 
 type Schedule struct {
-	LastAnswered time.Time
-	Due time.Time
+	LastAnswered time.Time 
+	Due          time.Time
 }
 
 type IntervalSchedule struct {
-	*Schedule
+	Schedule
 	Interval time.Duration
 }

@@ -39,5 +39,5 @@ func (scheduler *IntervalFactorScheduler) NextByFactor(schedule IntervalSchedule
 		nextInterval = scheduler.MinimumInterval
 	}
 
-	return IntervalSchedule{Schedule: &Schedule{LastAnswered: answered, Due: answered.Add(nextInterval)}, Interval: nextInterval}
+	return IntervalSchedule{Schedule: Schedule{LastAnswered: answered, Due: answered.Add(nextInterval)}, Interval: nextInterval}
 }

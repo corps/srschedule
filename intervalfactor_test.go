@@ -24,7 +24,7 @@ type testCase struct {
 }
 
 func (t *testCase) currentSchedule() IntervalSchedule {
-	return IntervalSchedule{Interval: t.interval, Schedule: &Schedule{Due: t.due, LastAnswered: t.due.Add(-t.interval)}}
+	return IntervalSchedule{Interval: t.interval, Schedule: Schedule{Due: t.due, LastAnswered: t.due.Add(-t.interval)}}
 }
 
 func (t *testCase) nextSchedule() IntervalSchedule {
